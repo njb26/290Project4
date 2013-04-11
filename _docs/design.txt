@@ -1,0 +1,86 @@
+RPG Dungeon crawler
+- Top-down
+- Always-centered camera
+  - Smooth transition
+
+Have 3 characters 
+	Fighter
+	Wizard
+	Thief 
+
+Moving through overworld stuff to maybe come later 
+
+Combat is first priority 
+	Have each player attacking in turn order with AI, based on random speed (initiative roll)
+Player mechanics 
+Each player has a swamp with next in line 
+
+Fighter
+- Sword Slash
+- Intercept 
+- The next hit will go to him 100%
+
+Wizard
+- Chain lighting 
+    - A little damage to each 
+- Heal
+    - Is percentage based since fighter will have more health. 
+- Fireball 
+
+Thief
+- Bow attack
+- Smoke bomb 
+- Poison stab 
+
+In terms of agro, each AI has a 60% to attack fighter, 20% for the other 2
+
+Dying mechanic
+- Revive at next floor
+
+Leveling up
+- Level at next floor
+
+Enemies
+- Exists on floor
+- Fight initiates if you're seen
+- Can sneak up (thief only?)
+
+
+Crawler map 
+- (consider it being procedural generated) 
+- Is going to be going through a dungeon 
+- Is a grid based, 
+- Every step has a chance to start an encounter 
+- Farther in dungeon you go, harder the average monster 
+- Leveling up is very rapid 
+    - As you level up you get more abalites, HP, and attack. 
+- Overworld not limited to line of sight. 
+- Things we need in overworld 
+    - Safe Tiles
+    - Danger tiles
+    - Walls
+    - Stairs
+    - Doors
+    - Locked doors
+    - Keys 
+- Short levels
+
+Fight map
+- Turn-based
+- Combo moves
+- Arbitrary arrangement
+- Can pick target
+
+Actions
+- Out-of-combat actions
+    - Move 1 step
+    - Get key/open door
+    - Use item
+    - Swap leader
+- Combat
+    - Attack
+    - Special attack
+    - Swap
+    - Defend
+    - Use item
+
