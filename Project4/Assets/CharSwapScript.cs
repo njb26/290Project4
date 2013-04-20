@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class CharSwapScript : MonoBehaviour {
-	float lerpAmount = 0f;
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -16,7 +16,8 @@ public class CharSwapScript : MonoBehaviour {
 						
 		//swap right two partners
 		if(Input.GetKeyDown("w")){
-			GameObject middle, right = null;
+			GameObject middle = null;
+			GameObject right = null;
 			//find which one is in the middle and the right, assign to correct GameObject
 			foreach(GameObject obj in allies){
 				if(obj.GetComponent<CharMovementScript>()){
@@ -29,17 +30,17 @@ public class CharSwapScript : MonoBehaviour {
 			Vector3 tempPos = middle.transform.position;
 			
 			//swap positions
-			middle.transform.position  = Vector3.Lerp(middle.transform.position, right.transform.position, lerpAmount);
-			right.transform.position  = Vector3.Lerp(right.transform.position, tempPos, lerpAmount);
+			middle.transform.position = right.transform.position;
+			right.transform.position  = tempPos;
 			//set new charPos
 			middle.GetComponent<CharMovementScript>().charPos = 2;
 			right.GetComponent<CharMovementScript>().charPos = 1;
-			lerpAmount += Time.deltaTime;
 		}
 		
 		//swap left two partners
 		if(Input.GetKeyDown("q")){
-			GameObject middle, left = null;
+			GameObject middle = null;
+			GameObject left = null;
 			//find which one is in the middle and the left, assign to correct GameObject
 			foreach(GameObject obj in allies){
 				if(obj.GetComponent<CharMovementScript>()){
@@ -52,12 +53,11 @@ public class CharSwapScript : MonoBehaviour {
 			Vector3 tempPos = middle.transform.position;
 			
 			//swap positions
-			middle.transform.position  = Vector3.Lerp(middle.transform.position, left.transform.position, lerpAmount);
-			left.transform.position  = Vector3.Lerp(left.transform.position, tempPos, lerpAmount);
+			middle.transform.position  =  left.transform.position;
+			left.transform.position  =  tempPos;
 			//set new charPos
 			middle.GetComponent<CharMovementScript>().charPos = 0;
 			left.GetComponent<CharMovementScript>().charPos = 1;
-			lerpAmount += Time.deltaTime;
 		}
 	}
 }
