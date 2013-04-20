@@ -35,7 +35,7 @@ public class CharMovementScript : MonoBehaviour {
 		}
 		
 		//character swap
-		if(Input.GetKeyDown("q")){
+		/*if(Input.GetKeyDown("q")){
 			int partner = findQPartner();
 			//find all players
 			GameObject.FindGameObjectsWithTag("Player");
@@ -50,31 +50,12 @@ public class CharMovementScript : MonoBehaviour {
 		case 2:
 			break;
 		}
-		}
-		
-		if(Input.GetKeyDown("w")){
-			int partner = findWPartner();
-			//find all players
-			GameObject.FindGameObjectsWithTag("Player");
-			//find one with correct CharPos (int partner has the value you're looking for)
-			//get their position
-			//your position = their position
-			//set new charPos
-		switch(charPos){
-		case 0:			
-			break;
-		case 1:
-			break;
-		case 2:
-			break;
-		}
-		
-		}
+		}*/
 		
 		lerpAmount += Time.deltaTime;
 	}
 	
-	int findQPartner(){
+/*	int findQPartner(){
 		switch(charPos){
 		case 0:
 			return 1;
@@ -88,22 +69,8 @@ public class CharMovementScript : MonoBehaviour {
 		}
 		print("Error in QPartner");
 		return -1;
-	}
-	int findWPartner(){
-		switch(charPos){
-		case 0:
-			return 0;
-			break;
-		case 1:
-			return 2;
-			break;
-		case 2:
-			return 1;
-			break;
-		}
-		print("Error in QPartner");
-		return -1; //won't happen
-	}
+	}*/
+	
 	void charMoveLeft(){
 		switch(charPos){
 		case 0:			
