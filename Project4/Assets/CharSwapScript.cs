@@ -2,18 +2,16 @@ using UnityEngine;
 using System.Collections;
 
 public class CharSwapScript : MonoBehaviour {
-	
+	GameObject[] allies;
 	// Use this for initialization
 	void Start () {
-	
+		//find all players		
+		allies = GameObject.FindGameObjectsWithTag("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//find all players
-		GameObject[] allies;
-		allies = GameObject.FindGameObjectsWithTag("Player");
-						
+		
 		//swap right two partners
 		if(Input.GetKeyDown("w")){
 			GameObject middle = null;

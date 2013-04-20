@@ -31,31 +31,57 @@ public class CharMovementScript : MonoBehaviour {
 				}
 		}
 		Vector3 frontPos = front.transform.position;
+		Vector3 newFrontPos = frontPos;
 		Vector3 middlePos = middle.transform.position;
+		bool move = true;
+		
 		//movement
 		if (Input.GetKeyDown("left")){
-			back.transform.position = middlePos;
-			middle.transform.position = frontPos;
-			frontPos.x +=10;
-            front.transform.position  = frontPos;
-		}           			
+			newFrontPos.x +=10;
+			//checks to make sure ally not in space you want to move
+			//if so, can't move there
+			if(newFrontPos == middlePos)
+				move = false;
+			if(move){
+				back.transform.position = middlePos;
+				middle.transform.position = frontPos;
+				front.transform.position  = newFrontPos;
+			}
+			move = true;
+		}
+		//lather, rinse, repeat
 		if (Input.GetKeyDown("up")){
+			newFrontPos.z -=10;
+			if(newFrontPos == middlePos)
+				move = false;
+			if(move){
 			back.transform.position = middlePos;
-			middle.transform.position = frontPos;
-			frontPos.z -=10;
-            front.transform.position  = frontPos;
+			middle.transform.position = frontPos;			
+            front.transform.position  = newFrontPos;
+			}
+			move = true;
 		}
 		if (Input.GetKeyDown("down")){
+			newFrontPos.z +=10;
+			if(newFrontPos == middlePos)
+				move = false;
+			if(move){				
 			back.transform.position = middlePos;
-			middle.transform.position = frontPos;
-			frontPos.z +=10;
-            front.transform.position  = frontPos;
+			middle.transform.position = frontPos;			
+            front.transform.position  = newFrontPos;
+			}
+			move = true;
 		}           	
 		if (Input.GetKeyDown ("right")){
+			newFrontPos.x -=10;
+			if(newFrontPos == middlePos)
+				move = false;
+			if(move){
 			back.transform.position = middlePos;
-			middle.transform.position = frontPos;
-			frontPos.x -=10;
-            front.transform.position  = frontPos; 
+			middle.transform.position = frontPos;			
+            front.transform.position  = newFrontPos;
+			}
+			move = true;
 		}
 	}
 	
