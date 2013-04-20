@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CharBehaviorScript.cs" />
      <Compile Include="Assets\CharMovementScript.cs" />
      <Compile Include="Assets\CharSwapScript.cs" />
      <Compile Include="Assets\UnitySerializer\Scripts\AddSomeForce.cs" />

@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CharSwapScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CharMovementScript.cs">
     <Files>
-      <File FileName="Assets\CharSwapScript.cs" Line="60" Column="56" />
-      <File FileName="Assets\CharMovementScript.cs" Line="6" Column="2" />
+      <File FileName="Assets\CharMovementScript.cs" Line="25" Column="60" />
+      <File FileName="Assets\CharSwapScript.cs" Line="60" Column="40" />
+      <File FileName="Assets\CharBehaviorScript.cs" Line="10" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

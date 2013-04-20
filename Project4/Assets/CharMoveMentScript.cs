@@ -3,10 +3,10 @@ using System.Collections;
 
 public class CharMovementScript : MonoBehaviour {
 	
-	float lerpAmount = 0f;
+	//float lerpAmount = 0f;
 	//didn't want to make an enum because who needs it?
 	//position for chars: 0 is "back", 1 is "middle", 2 is "front"
-	public int charPos;
+	
 	
 	// Use this for initialization
 	void Start () {	
@@ -15,73 +15,48 @@ public class CharMovementScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 pos = transform.position;	
+		
+		GameObject[] allies;
+		allies = GameObject.FindGameObjectsWithTag("Player");
+		//get object for each ally
+		GameObject back = null; GameObject middle = null; GameObject front = null;
+		foreach(GameObject obj in allies){
+				if(obj.GetComponent<CharBehaviorScript>()){
+					if(obj.GetComponent<CharBehaviorScript>().charPos == 0)
+						back = obj;
+					if(obj.GetComponent<CharBehaviorScript>().charPos == 1)
+						middle = obj;
+					if(obj.GetComponent<CharBehaviorScript>().charPos == 2)
+						front = obj;
+				}
+		}
+		Vector3 frontPos = front.transform.position;
+		Vector3 middlePos = middle.transform.position;
 		//movement
 		if (Input.GetKeyDown("left")){
-			pos.x +=10;
-            transform.position  = Vector3.Lerp(transform.position, pos, lerpAmount); 
+			back.transform.position = middlePos;
+			middle.transform.position = frontPos;
+			frontPos.x +=10;
+            front.transform.position  = frontPos;
 		}           			
 		if (Input.GetKeyDown("up")){
-			pos.z -=10;
-            transform.position  = Vector3.Lerp(transform.position, pos, lerpAmount); 
+			back.transform.position = middlePos;
+			middle.transform.position = frontPos;
+			frontPos.z -=10;
+            front.transform.position  = frontPos;
 		}
 		if (Input.GetKeyDown("down")){
-			pos.z +=10;
-            transform.position  = Vector3.Lerp(transform.position, pos, lerpAmount); 
+			back.transform.position = middlePos;
+			middle.transform.position = frontPos;
+			frontPos.z +=10;
+            front.transform.position  = frontPos;
 		}           	
 		if (Input.GetKeyDown ("right")){
-			pos.x -=10;
-            transform.position  = Vector3.Lerp(transform.position, pos, lerpAmount); 
+			back.transform.position = middlePos;
+			middle.transform.position = frontPos;
+			frontPos.x -=10;
+            front.transform.position  = frontPos; 
 		}
-		
-		//character swap
-		/*if(Input.GetKeyDown("q")){
-			int partner = findQPartner();
-			//find all players
-			GameObject.FindGameObjectsWithTag("Player");
-			//find one with correct CharPos (int partner has the value you're looking for)
-			//get their position
-			//your position = their position
-		switch(charPos){
-		case 0:			
-			break;
-		case 1:
-			break;
-		case 2:
-			break;
-		}
-		}*/
-		
-		lerpAmount += Time.deltaTime;
-	}
-	
-/*	int findQPartner(){
-		switch(charPos){
-		case 0:
-			return 1;
-			break;
-		case 1:
-			return 0;
-			break;
-		case 2:
-			return 2;
-			break;
-		}
-		print("Error in QPartner");
-		return -1;
-	}*/
-	
-	void charMoveLeft(){
-		switch(charPos){
-		case 0:			
-			break;
-		case 1:
-			break;
-		case 2:
-			break;
-		}
-		
-	
 	}
 	
 }

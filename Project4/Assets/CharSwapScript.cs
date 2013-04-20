@@ -20,10 +20,10 @@ public class CharSwapScript : MonoBehaviour {
 			GameObject right = null;
 			//find which one is in the middle and the right, assign to correct GameObject
 			foreach(GameObject obj in allies){
-				if(obj.GetComponent<CharMovementScript>()){
-					if(obj.GetComponent<CharMovementScript>().charPos == 1)
+				if(obj.GetComponent<CharBehaviorScript>()){
+					if(obj.GetComponent<CharBehaviorScript>().charPos == 1)
 						middle = obj;
-					if(obj.GetComponent<CharMovementScript>().charPos == 2)
+					if(obj.GetComponent<CharBehaviorScript>().charPos == 2)
 						right = obj;
 				}
 			}
@@ -33,8 +33,8 @@ public class CharSwapScript : MonoBehaviour {
 			middle.transform.position = right.transform.position;
 			right.transform.position  = tempPos;
 			//set new charPos
-			middle.GetComponent<CharMovementScript>().charPos = 2;
-			right.GetComponent<CharMovementScript>().charPos = 1;
+			middle.GetComponent<CharBehaviorScript>().charPos = 2;
+			right.GetComponent<CharBehaviorScript>().charPos = 1;
 		}
 		
 		//swap left two partners
@@ -43,10 +43,10 @@ public class CharSwapScript : MonoBehaviour {
 			GameObject left = null;
 			//find which one is in the middle and the left, assign to correct GameObject
 			foreach(GameObject obj in allies){
-				if(obj.GetComponent<CharMovementScript>()){
-					if(obj.GetComponent<CharMovementScript>().charPos == 1)
+				if(obj.GetComponent<CharBehaviorScript>()){
+					if(obj.GetComponent<CharBehaviorScript>().charPos == 1)
 						middle = obj;
-					if(obj.GetComponent<CharMovementScript>().charPos == 0)
+					if(obj.GetComponent<CharBehaviorScript>().charPos == 0)
 						left = obj;
 				}
 			}
@@ -56,8 +56,8 @@ public class CharSwapScript : MonoBehaviour {
 			middle.transform.position  =  left.transform.position;
 			left.transform.position  =  tempPos;
 			//set new charPos
-			middle.GetComponent<CharMovementScript>().charPos = 0;
-			left.GetComponent<CharMovementScript>().charPos = 1;
+			middle.GetComponent<CharBehaviorScript>().charPos = 0;
+			left.GetComponent<CharBehaviorScript>().charPos = 1;
 		}
 	}
 }
