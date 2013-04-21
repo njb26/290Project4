@@ -2,8 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\EnemyMovementScript.cs">
     <Files>
-      <File FileName="Assets\EnemyMovementScript.cs" Line="17" Column="4" />
-      <File FileName="Assets\CharMovementScript.cs" Line="20" Column="56" />
+      <File FileName="Assets\EnemyMovementScript.cs" Line="201" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

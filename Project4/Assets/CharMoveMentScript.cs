@@ -1,3 +1,6 @@
+	/*
+	 *Code by Niklas Bauer, njb26 
+	 * */
 using UnityEngine;
 using System.Collections;
 
