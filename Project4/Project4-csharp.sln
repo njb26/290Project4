@@ -5,8 +5,6 @@ Project("{4797D0C4-A786-D721-8C31-95B97FE01250}") = "Project4", "Assembly-CSharp
 EndProject
 Project("{4797D0C4-A786-D721-8C31-95B97FE01250}") = "Project4", "Assembly-CSharp-vs.csproj", "{587982FE-DD50-7361-408B-2BFCE197AA8D}"
 EndProject
-Project("{4797D0C4-A786-D721-8C31-95B97FE01250}") = "Project4", "Assembly-CSharp-Editor-firstpass-vs.csproj", "{410981AD-5F0A-1C38-C26D-2F46BBBE1DA3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,15 +19,11 @@ Global
 		{587982FE-DD50-7361-408B-2BFCE197AA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{587982FE-DD50-7361-408B-2BFCE197AA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{587982FE-DD50-7361-408B-2BFCE197AA8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{410981AD-5F0A-1C38-C26D-2F46BBBE1DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{410981AD-5F0A-1C38-C26D-2F46BBBE1DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{410981AD-5F0A-1C38-C26D-2F46BBBE1DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{410981AD-5F0A-1C38-C26D-2F46BBBE1DA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																														GlobalSection(MonoDevelopProperties) = preSolution
+																																				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
