@@ -48,8 +48,10 @@
      <Compile Include="Assets\Plugins\Editor\whydoidoit.com\EditSaveGameManager.cs" />
      <Compile Include="Assets\Plugins\Editor\whydoidoit.com\EditStoreInformation.cs" />
      <Compile Include="Assets\Plugins\Editor\whydoidoit.com\UnitySerializerWindow.cs" />
+     <None Include="Assets\level1.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Plugins\whydoidoit.com\license.txt" />
+     <None Include="Assets\level2.txt" />
      <None Include="Assets\UnitySerializer\readme.txt" />
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>

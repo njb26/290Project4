@@ -49,6 +49,7 @@
      <Compile Include="Assets\CharSwapScript.cs" />
      <Compile Include="Assets\EnemyMovementScript.cs" />
      <Compile Include="Assets\MainCameraScript.cs" />
+     <Compile Include="Assets\MapPlacementScript.cs" />
      <Compile Include="Assets\UnitySerializer\Scripts\AddSomeForce.cs" />
      <Compile Include="Assets\UnitySerializer\Scripts\AdditionalData.cs" />
      <Compile Include="Assets\UnitySerializer\Scripts\AdditionalDataStorage.cs" />
@@ -74,8 +75,10 @@
      <Compile Include="Assets\UnitySerializer\Scripts\TestLoading.cs" />
      <Compile Include="Assets\UnitySerializer\Scripts\TestSerialization.cs" />
      <Compile Include="Assets\UnitySerializer\Scripts\VariablesToSave.cs" />
+     <None Include="Assets\level1.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Plugins\whydoidoit.com\license.txt" />
+     <None Include="Assets\level2.txt" />
      <None Include="Assets\UnitySerializer\readme.txt" />
   </ItemGroup>
   <ItemGroup>
