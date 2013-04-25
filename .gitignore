@@ -1,0 +1,33 @@
+###################
+###  FILETYPES  ###
+###################
+*.swp
+*~
+*.csproj
+*.unityproj
+*.sln
+
+###################
+### DIRECTORIES ###
+###################
+Project4/*
+
+Project4/[Ll]ibrary/
+Project4/[Tt]emp/
+Project4/[Oo]bj/
+
+###################
+###   EXCEPT    ###
+###################
+!.gitignore
+!.gitattributes
+!README.md
+
+!_docs/
+!Project4/Assets/
+!Project4/ProjectSettings/
+!Project4/Builds/
+
+<<<<<<< HEAD
+=======
+>>>>>>> 48c79d69a60da806e35419622716e12a1b14e971
