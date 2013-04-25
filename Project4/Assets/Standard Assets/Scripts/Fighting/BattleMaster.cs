@@ -24,6 +24,7 @@ public class BattleMaster : MonoBehaviour {
     bool delaying = false;
 
     // Hero variables
+    public GameObject g_Fighter, g_Thief, g_Wizard;
     public Entity Fighter, Thief, Wizard;
     public Entity[] players {
         get {
@@ -267,6 +268,7 @@ public class BattleMaster : MonoBehaviour {
         // Fighter
         Fighter = new Entity();
         Fighter.name = "Fighter";
+        Fighter.parent = g_Fighter;
         Fighter.MaxHP = Fighter.HP = 40;
         Fighter.Atk = 5; Fighter.Def = 6;
         Fighter.Mag = 0; Fighter.Res = 1;
@@ -275,6 +277,7 @@ public class BattleMaster : MonoBehaviour {
         // Thief
         Thief = new Entity();
         Thief.name = "Thief";
+        Thief.parent = g_Thief;
         Thief.MaxHP = Thief.HP = 30;
         Thief.Atk = 3; Thief.Def = 4;
         Thief.Mag = 1; Thief.Res = 2;
@@ -283,6 +286,7 @@ public class BattleMaster : MonoBehaviour {
         // Wizard
         Wizard = new Entity();
         Wizard.name = "Wizard";
+        Wizard.parent = g_Wizard;
         Wizard.MaxHP = Wizard.HP = 20;
         Wizard.Atk = 1; Wizard.Def = 2;
         Wizard.Mag = 8; Wizard.Res = 8;
