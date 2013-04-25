@@ -13,12 +13,12 @@ public class BattleMaster : MonoBehaviour {
         Won,
         Lost
     }
-    public static State state = Playing;
+    public static State state = State.Playing;
 
     // Timing variables
     public float ActionResultDelay;
     public float EnemyDecideDelay;
-    float delay = 0.0;
+    float delay = 0f;
     bool delaying = false;
 
     // Hero variables
@@ -43,8 +43,7 @@ public class BattleMaster : MonoBehaviour {
 
 	// Use this for initialization
 	void Start() {
-        GameMaster gamemaster = GameObject.Find("GameMaster") as GameMaster;
-        var entities = gamemaster.players;
+        var entities = GameMaster.players;
 
         for (int i = 0; i < entities.Length; i++) {
             switch (entities[i].type) {
@@ -98,7 +97,7 @@ public class BattleMaster : MonoBehaviour {
                     target = Fighter;
                 }
                 else {
-                    chance = r.Next(100);
+                    var chance = (int)(Random.value * 100);
                     if (chance < 66) {
                         target = GetPlayer(0);
                     }
@@ -126,7 +125,7 @@ public class BattleMaster : MonoBehaviour {
                 break;
             case State.Acting :
                 if (target != null) {
-                    int damage = acting.Attack(target);
+                    int damage = acting.Attack(0, target);
 
                     // TODO: Display damage result on screen.
 
@@ -144,7 +143,7 @@ public class BattleMaster : MonoBehaviour {
         }
 	}
 
-    public void GetPlayer(int position) {
+    public Entity GetPlayer(int position) {
         if (Fighter.position == position)
             return Fighter;
         if (Thief.position == position)
@@ -160,7 +159,7 @@ public class BattleMaster : MonoBehaviour {
         entities.Sort();
 
         waiting = new Queue<Entity>();
-        toremove = new Hashset<Entity>();
+        toremove = new HashSet<Entity>();
         foreach (Entity entity in entities)
             waiting.Enqueue(entity);
 

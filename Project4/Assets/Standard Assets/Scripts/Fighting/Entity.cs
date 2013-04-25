@@ -3,7 +3,10 @@
 /// RPG        - Entity.cs
 /// Script to store enemy and player information.
 
-public class Entity : IComparable<Entity> {
+using UnityEngine;
+using System.Collections.Generic;
+
+public class Entity : System.IComparable<Entity> {
     public enum AttackType { Physical, Magical }
     public enum Type {
         Enemy,
@@ -15,8 +18,6 @@ public class Entity : IComparable<Entity> {
     const double THRESHOLD = 5.0;
     const int ATKTHRESHOLD = 7;
 
-    private static Random r = new Random();
-
     public Type type;
     public AttackType[] attacks;
 
@@ -26,7 +27,7 @@ public class Entity : IComparable<Entity> {
     public double sortOffset;
 
     public Entity() {
-        sortOffset = (r.NextDouble() - 0.5) * THRESHOLD;
+        sortOffset = (Random.value - 0.5) * THRESHOLD;
     }
 
     public int Attack(int index, Entity enemy) {
@@ -46,7 +47,7 @@ public class Entity : IComparable<Entity> {
         }
 
         // Calculate thedamage dealt.
-        int R = r.Next(2 * ATKTHRESHOLD) + 256 - ATKTHRESHOLD;
+        int R = (int)(Random.value * 2 * ATKTHRESHOLD)+ 256 - ATKTHRESHOLD;
         int H = (A - D > 1) ? (A - D) : 1;
         int damage = R * H / 255;
 
