@@ -37,7 +37,11 @@ public class BattleMaster : MonoBehaviour {
         }
     }
     public bool FighterIntercept = false;
-
+	
+	// Enemy Variables 
+	public Entity currentEmeny;
+	
+	
     // Attack queue variables
     Queue<Entity> waiting;
     HashSet<Entity> toremove;
@@ -64,7 +68,7 @@ public class BattleMaster : MonoBehaviour {
 	void Start() {
         InitPlayers();
         acting = null;
-        Reset(0);
+        Reset(0,0,0);
 	}
 	
     private int count = 0;
@@ -240,9 +244,22 @@ public class BattleMaster : MonoBehaviour {
         return null;
     }
 
-    public void Reset(int enemycount) {
+    public void Reset(int physicalEnemyCount, int magicalEnemyCount, int BossEnemyCount) {
         List<Entity> entities = new List<Entity>(players);
-        // TODO: Import enemies.
+        
+		while(physicalEnemyCount>0){		
+			entities.Add(CreatePhysicalEnemy());
+			physicalEnemyCount--;
+		}		
+		while(magicalEnemyCount>0){
+			entities.Add(CreateMagicalEnemy());
+			magicalEnemyCount--;
+		}
+		while(BossEnemyCount>0){
+			entities.Add(CreateBossEnemy());
+			BossEnemyCount--;
+		}
+		
         entities.Sort();
 
         log = new LinkedList<string>();
@@ -290,6 +307,43 @@ public class BattleMaster : MonoBehaviour {
         Wizard.MaxHP = Wizard.HP = 20;
         Wizard.Atk = 1; Wizard.Def = 2;
         Wizard.Mag = 8; Wizard.Res = 8;
-        Wizard.Spd = 4; Wizard.position = 2;
+        Wizard.Spd = 5; Wizard.position = 2;
     }
+	
+	
+	public Entity CreatePhysicalEnemy(){
+		Entity physicMob = new Entity();
+		physicMob.name="physicMob";
+		//physicMob.parent = 
+		physicMob.MaxHP = physicMob.HP = 30;
+		physicMob.Atk = 5; physicMob.Def = 5;
+       	physicMob.Mag = 0; physicMob.Res = 2;
+        physicMob.Spd = 2; physicMob.position = 0;
+		
+		return physicMob;
+	}
+	
+	public Entity CreateMagicalEnemy(){
+		Entity magicMob = new Entity();
+		magicMob.name = "magicMob";
+        //magicMob.parent = 
+        magicMob.MaxHP = magicMob.HP = 18;
+        magicMob.Atk = 1; magicMob.Def = 1;
+        magicMob.Mag = 7; magicMob.Res = 10;
+        magicMob.Spd = 4; magicMob.position = 0;	
+		
+		return magicMob;	
+	}	
+	
+	public Entity CreateBossEnemy(){
+		Entity BossMob = new Entity();
+		BossMob.name = "BossMob";
+        //BossMob.parent = 
+        BossMob.MaxHP = BossMob.HP = 60;
+        BossMob.Atk = 8; BossMob.Def = 10;
+        BossMob.Mag = 10; BossMob.Res = 12;
+        BossMob.Spd = 7; BossMob.position = 0;	
+		
+		return BossMob;	
+	}	
 }
