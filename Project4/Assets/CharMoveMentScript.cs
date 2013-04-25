@@ -4,7 +4,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class CharMovementScript : MonoBehaviour {
+public class CharMoveMentScript : MonoBehaviour {
 	
 	//float lerpAmount = 0f;
 	//didn't want to make an enum because who needs it?
