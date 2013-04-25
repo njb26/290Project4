@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CharMoveMentScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MapPlacementScript.cs">
     <Files>
+      <File FileName="Assets\MapPlacementScript.cs" Line="30" Column="3" />
       <File FileName="Assets\CharMoveMentScript.cs" Line="9" Column="26" />
-      <File FileName="Assets\MapPlacementScript.cs" Line="1" Column="1" />
       <File FileName="Assets\CharBehaviorScript.cs" Line="1" Column="1" />
       <File FileName="Assets\EnemyMovementScript.cs" Line="1" Column="1" />
     </Files>

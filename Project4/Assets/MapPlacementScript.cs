@@ -35,7 +35,7 @@ public class MapPlacementScript : MonoBehaviour
 		Tiles.Add ("Tile7",Tile7);
 		Tiles.Add ("Tile8",Tile8);
 		Tiles.Add ("Tile9",Tile9);
-		this.LoadLevel (2);
+		this.LoadLevel (1);
 	}
 	
 	void LoadLevel(int level)
@@ -79,6 +79,23 @@ public class MapPlacementScript : MonoBehaviour
         {
             Console.WriteLine("The process failed: {0}", e.ToString());
         }
+	}
+	
+	public int GetTile (int x, int y)
+	{
+		return numList[x][y];
+	}
+	
+	public bool CanWalk (int x, int y)
+	{
+		if (this.GetTile (x,y) >= 1 || this.GetTile (x,y) <= 6)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
 	}
 	
 	void Update () 
