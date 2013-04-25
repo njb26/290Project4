@@ -135,6 +135,9 @@
      <Compile Include="Assets\Plugins\whydoidoit.com\UnitySerializerVersion.cs" />
      <Compile Include="Assets\Plugins\whydoidoit.com\Utility\Types.cs" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Fighting\BattleMaster.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Fighting\Entity.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Fighting\GameMaster.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\CombineChildren.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\MeshCombineUtility.cs" />

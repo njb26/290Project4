@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CharBehaviorScript.cs" />
-     <Compile Include="Assets\CharMovementScript.cs" />
+     <Compile Include="Assets\CharMoveMentScript.cs" />
      <Compile Include="Assets\CharSwapScript.cs" />
      <Compile Include="Assets\EnemyMovementScript.cs" />
      <Compile Include="Assets\MainCameraScript.cs" />
