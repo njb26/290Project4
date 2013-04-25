@@ -74,6 +74,11 @@ public class BattleMaster : MonoBehaviour {
     private int count = 0;
 	// Update is called once per frame
 	void Update () {
+        //  Update the locations of the players.
+        g_Fighter.transform.position = new Vector3(20 + 8 * Fighter.position, 0, 0);
+        g_Thief.transform.position = new Vector3(20 + 8 * Thief.position, 0, 0);
+        g_Wizard.transform.position = new Vector3(20 + 8 * Wizard.position, 0, 0);
+
         // Count down any delays.
         if (delay > 0.0) {
             delay -= Time.deltaTime;
