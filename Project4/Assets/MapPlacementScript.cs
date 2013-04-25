@@ -19,6 +19,8 @@ public class MapPlacementScript : MonoBehaviour
 	private Dictionary<string,GameObject> Tiles = new Dictionary<string, GameObject>();
 	public int tileSize = 10;
 	
+	public int level = 1;
+	
 	public List<int[]> numList = new List<int[]>();
 	public Vector3 corner = new Vector3(0,0,0);	
 	public Vector3 tileAngle = new Vector3(270,0,90);
@@ -35,7 +37,7 @@ public class MapPlacementScript : MonoBehaviour
 		Tiles.Add ("Tile7",Tile7);
 		Tiles.Add ("Tile8",Tile8);
 		Tiles.Add ("Tile9",Tile9);
-		this.LoadLevel (1);
+		this.LoadLevel (level);
 	}
 	
 	void LoadLevel(int level)
@@ -84,6 +86,13 @@ public class MapPlacementScript : MonoBehaviour
 	public int GetTile (int x, int y)
 	{
 		return numList[x][y];
+	}
+	
+	public void OpenDoor (int x, int y)
+	{
+		if (GetTile (x,y) == 6)
+		{
+		}
 	}
 	
 	public bool CanWalk (int x, int y)
